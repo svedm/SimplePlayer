@@ -18,7 +18,7 @@ final public class NIOSSDPClient: SSDPClient {
 
     public init() {}
 
-    public func discover() async throws -> [SSDPSearchResponse] {
+    public func discover(target: SSDPSearchTarget, timeout: Int) async throws -> [SSDPSearchResponse] {
         foundedDevices = []
 
         let channel = try DatagramBootstrap(group: group)
@@ -37,19 +37,18 @@ final public class NIOSSDPClient: SSDPClient {
             let message = "M-SEARCH * HTTP/1.1\r\n"
                 + "MAN: \"ssdp:discover\"\r\n"
                 + "HOST: \(Constants.ssdpHost):\(Constants.ssdpPort)\r\n"
-                + "ST: ssdp:all\r\n"
-                + "MX: 1\r\n\r\n"
+                + "ST: \(target.stringValue)\r\n"
+                + "MX: \(timeout)\r\n\r\n"
             let buffer = channel.allocator.buffer(string: message)
             let envolope = AddressedEnvelope<ByteBuffer>(remoteAddress: multicastGroup, data: buffer)
             channel.writeAndFlush(envolope, promise: nil)
         }
 
-
-
-        group.next().scheduleTask(in: .seconds(5)) {
+        group.next().scheduleTask(in: .seconds(Int64(timeout))) {
             channel
                 .close()
-                .whenComplete { _ in
+                .whenComplete { [weak self] _ in
+                    guard let self = self else { return }
                     self.group.shutdownGracefully { error in
                         if let error = error {
                             self.discoveryContinuation?.resume(throwing: error)
@@ -60,7 +59,6 @@ final public class NIOSSDPClient: SSDPClient {
                     }
                 }
         }
-
 
         return try await withCheckedThrowingContinuation { continuation in
             self.discoveryContinuation = continuation

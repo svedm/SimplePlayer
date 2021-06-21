@@ -1,11 +1,9 @@
 import Foundation
 import NIO
 
-
 /// SSPD search response
 /// #1.3.3 https://openconnectivity.org/upnp-specs/UPnP-arch-DeviceArchitecture-v2.0-20200417.pdf
 public struct SSDPSearchResponse {
-
     /// Field value shall have the max-age directive (“max-age=”)
     /// followed by an integer that specifies the number of seconds the advertisement is valid.
     var cacheControl: String

@@ -90,6 +90,7 @@
 			buildConfigurationList = 66513147267AB100009BD993 /* Build configuration list for PBXNativeTarget "SimplePlayer (iOS)" */;
 			buildPhases = (
 				66513134267AB100009BD993 /* Sources */,
+				66180A9E2680ED0600454543 /* Swiftlint */,
 				66513135267AB100009BD993 /* Frameworks */,
 				66513136267AB100009BD993 /* Resources */,
 			);
@@ -180,6 +181,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		66180A9E2680ED0600454543 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n    cd ..\n    swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		66513134267AB100009BD993 /* Sources */ = {

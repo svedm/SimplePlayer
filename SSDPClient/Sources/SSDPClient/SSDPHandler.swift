@@ -17,16 +17,17 @@ final class SSDPHandler: ChannelInboundHandler {
         let envelope = self.unwrapInboundIn(data)
         let byteBuffer = envelope.data
 
-        if byteBuffer.readableBytes > 0 {
-            let string = String(buffer: byteBuffer)
-            logger.info("Received: '\(string)'")
-            do {
-                let response = try SSDPSearchResponse(response: string)
-                handler(response)
-            } catch {
-                logger.error("Response parsing failed \(error)")
-            }
+        guard byteBuffer.readableBytes > 0 else { return }
+
+        let string = String(buffer: byteBuffer)
+        logger.info("Received: '\(string)'")
+        do {
+            let response = try SSDPSearchResponse(response: string)
+            handler(response)
+        } catch {
+            logger.error("Response parsing failed \(error)")
         }
+
     }
 
     public func errorCaught(context: ChannelHandlerContext, error: Error) {
