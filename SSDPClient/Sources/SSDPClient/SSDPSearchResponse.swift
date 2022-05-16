@@ -3,29 +3,29 @@ import NIO
 
 /// SSPD search response
 /// #1.3.3 https://openconnectivity.org/upnp-specs/UPnP-arch-DeviceArchitecture-v2.0-20200417.pdf
-public struct SSDPSearchResponse {
+public struct SSDPSearchResponse: Hashable {
     /// Field value shall have the max-age directive (“max-age=”)
     /// followed by an integer that specifies the number of seconds the advertisement is valid.
-    var cacheControl: String
+    public var cacheControl: String
 
     /// Field value contains date when response was generated. “rfc1123-date” as defined in RFC 2616.
-    var date: String?
+    public var date: String?
 
     /// Required for backwards compatibility with UPnP 1.0. (Header field name only; no field value.)
-    var ext: String?
+    public var ext: String?
 
     /// Field value contains a URL to the UPnP description of the root device.
-    var location: String
+    public var location: URL
 
     /// Specified by UPnP vendor. Value shall begin with the following `product tokens`
     /// For example, “SERVER: unix/5.1 UPnP/2.0 MyProduct/1.0”.
-    var server: String
+    public var server: String
 
     /// Field value contains Search Target. Single URI
-    var st: String
+    public var st: String
 
     /// Field value contains Unique Service Name. Identifies a unique instance of a device or service
-    var usn: String
+    public var usn: String
 
     public enum ParsingError: Error {
         case cacheControl
@@ -52,7 +52,7 @@ public struct SSDPSearchResponse {
         date = headers["DATE"]
         ext = headers["EXT"]
 
-        guard let location = headers["LOCATION"] else { throw ParsingError.location }
+        guard let location = headers["LOCATION"].flatMap(URL.init(string:)) else { throw ParsingError.location }
         self.location = location
 
         guard let server = headers["SERVER"] else { throw ParsingError.server }

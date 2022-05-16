@@ -11,7 +11,7 @@ import SwiftUI
 struct SimplePlayerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DevicesListView(viewModel: .init())
         }
     }
 }

@@ -11,19 +11,41 @@
 		66335E0B267AD4D5003FEB0D /* SSDPClient in Frameworks */ = {isa = PBXBuildFile; productRef = 66335E0A267AD4D5003FEB0D /* SSDPClient */; };
 		6651313F267AB100009BD993 /* SimplePlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66513131267AB0FF009BD993 /* SimplePlayerApp.swift */; };
 		66513140267AB100009BD993 /* SimplePlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66513131267AB0FF009BD993 /* SimplePlayerApp.swift */; };
-		66513141267AB100009BD993 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66513132267AB0FF009BD993 /* ContentView.swift */; };
-		66513142267AB100009BD993 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66513132267AB0FF009BD993 /* ContentView.swift */; };
+		66513141267AB100009BD993 /* DevicesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66513132267AB0FF009BD993 /* DevicesListView.swift */; };
+		66513142267AB100009BD993 /* DevicesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66513132267AB0FF009BD993 /* DevicesListView.swift */; };
 		66513143267AB100009BD993 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66513133267AB100009BD993 /* Assets.xcassets */; };
 		66513144267AB100009BD993 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66513133267AB100009BD993 /* Assets.xcassets */; };
+		79674C422832C463001F1083 /* DevicesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79674C412832C463001F1083 /* DevicesListViewModel.swift */; };
+		79674C432832C463001F1083 /* DevicesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79674C412832C463001F1083 /* DevicesListViewModel.swift */; };
+		79674C462832C5A4001F1083 /* BrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79674C452832C5A4001F1083 /* BrowseView.swift */; };
+		79674C472832C5A4001F1083 /* BrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79674C452832C5A4001F1083 /* BrowseView.swift */; };
+		79674C492832D598001F1083 /* BrowseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79674C482832D598001F1083 /* BrowseItem.swift */; };
+		79674C4A2832D598001F1083 /* BrowseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79674C482832D598001F1083 /* BrowseItem.swift */; };
+		79674C4C2832D5A7001F1083 /* BrowseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79674C4B2832D5A7001F1083 /* BrowseViewModel.swift */; };
+		79674C4D2832D5A7001F1083 /* BrowseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79674C4B2832D5A7001F1083 /* BrowseViewModel.swift */; };
+		79674C4F2832D5C7001F1083 /* BrowseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79674C4E2832D5C7001F1083 /* BrowseCell.swift */; };
+		79674C502832D5C7001F1083 /* BrowseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79674C4E2832D5C7001F1083 /* BrowseCell.swift */; };
+		79674C532832D60E001F1083 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79674C522832D60E001F1083 /* PlayerView.swift */; };
+		79674C542832D60E001F1083 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79674C522832D60E001F1083 /* PlayerView.swift */; };
+		79D2D332282E6E13007BE4C6 /* UPnPClient in Frameworks */ = {isa = PBXBuildFile; productRef = 79D2D331282E6E13007BE4C6 /* UPnPClient */; };
+		79D2D334282E6E1A007BE4C6 /* UPnPClient in Frameworks */ = {isa = PBXBuildFile; productRef = 79D2D333282E6E1A007BE4C6 /* UPnPClient */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		66513131267AB0FF009BD993 /* SimplePlayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePlayerApp.swift; sourceTree = "<group>"; };
-		66513132267AB0FF009BD993 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		66513132267AB0FF009BD993 /* DevicesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesListView.swift; sourceTree = "<group>"; };
 		66513133267AB100009BD993 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66513138267AB100009BD993 /* SimplePlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplePlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6651313E267AB100009BD993 /* SimplePlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplePlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66513160267AB27C009BD993 /* SSDPClient */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SSDPClient; path = ../SSDPClient; sourceTree = "<group>"; };
+		79674C412832C463001F1083 /* DevicesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesListViewModel.swift; sourceTree = "<group>"; };
+		79674C452832C5A4001F1083 /* BrowseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseView.swift; sourceTree = "<group>"; };
+		79674C482832D598001F1083 /* BrowseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseItem.swift; sourceTree = "<group>"; };
+		79674C4B2832D5A7001F1083 /* BrowseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewModel.swift; sourceTree = "<group>"; };
+		79674C4E2832D5C7001F1083 /* BrowseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseCell.swift; sourceTree = "<group>"; };
+		79674C522832D60E001F1083 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		79D2D32F282E5904007BE4C6 /* SimplePlayer (macOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SimplePlayer (macOS).entitlements"; sourceTree = "<group>"; };
+		79D2D330282E5C5C007BE4C6 /* UPnPClient */ = {isa = PBXFileReference; lastKnownFileType = folder; name = UPnPClient; path = ../UPnPClient; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79D2D332282E6E13007BE4C6 /* UPnPClient in Frameworks */,
 				66335E09267AD4CF003FEB0D /* SSDPClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -39,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79D2D334282E6E1A007BE4C6 /* UPnPClient in Frameworks */,
 				66335E0B267AD4D5003FEB0D /* SSDPClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,6 +80,8 @@
 		6651312B267AB0FE009BD993 = {
 			isa = PBXGroup;
 			children = (
+				79D2D330282E5C5C007BE4C6 /* UPnPClient */,
+				79D2D32F282E5904007BE4C6 /* SimplePlayer (macOS).entitlements */,
 				66513160267AB27C009BD993 /* SSDPClient */,
 				66513130267AB0FF009BD993 /* Shared */,
 				66513139267AB100009BD993 /* Products */,
@@ -66,8 +92,10 @@
 		66513130267AB0FF009BD993 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				79674C512832D601001F1083 /* Player */,
+				79674C442832C48D001F1083 /* Browse */,
+				79674C402832C233001F1083 /* DevicesList */,
 				66513131267AB0FF009BD993 /* SimplePlayerApp.swift */,
-				66513132267AB0FF009BD993 /* ContentView.swift */,
 				66513133267AB100009BD993 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -80,6 +108,34 @@
 				6651313E267AB100009BD993 /* SimplePlayer.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		79674C402832C233001F1083 /* DevicesList */ = {
+			isa = PBXGroup;
+			children = (
+				66513132267AB0FF009BD993 /* DevicesListView.swift */,
+				79674C412832C463001F1083 /* DevicesListViewModel.swift */,
+			);
+			path = DevicesList;
+			sourceTree = "<group>";
+		};
+		79674C442832C48D001F1083 /* Browse */ = {
+			isa = PBXGroup;
+			children = (
+				79674C452832C5A4001F1083 /* BrowseView.swift */,
+				79674C482832D598001F1083 /* BrowseItem.swift */,
+				79674C4B2832D5A7001F1083 /* BrowseViewModel.swift */,
+				79674C4E2832D5C7001F1083 /* BrowseCell.swift */,
+			);
+			path = Browse;
+			sourceTree = "<group>";
+		};
+		79674C512832D601001F1083 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				79674C522832D60E001F1083 /* PlayerView.swift */,
+			);
+			path = Player;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -101,6 +157,7 @@
 			name = "SimplePlayer (iOS)";
 			packageProductDependencies = (
 				66335E08267AD4CF003FEB0D /* SSDPClient */,
+				79D2D331282E6E13007BE4C6 /* UPnPClient */,
 			);
 			productName = "SimplePlayer (iOS)";
 			productReference = 66513138267AB100009BD993 /* SimplePlayer.app */;
@@ -121,6 +178,7 @@
 			name = "SimplePlayer (macOS)";
 			packageProductDependencies = (
 				66335E0A267AD4D5003FEB0D /* SSDPClient */,
+				79D2D333282E6E1A007BE4C6 /* UPnPClient */,
 			);
 			productName = "SimplePlayer (macOS)";
 			productReference = 6651313E267AB100009BD993 /* SimplePlayer.app */;
@@ -134,7 +192,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1310;
 				TargetAttributes = {
 					66513137267AB100009BD993 = {
 						CreatedOnToolsVersion = 13.0;
@@ -208,7 +266,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66513141267AB100009BD993 /* ContentView.swift in Sources */,
+				79674C462832C5A4001F1083 /* BrowseView.swift in Sources */,
+				79674C492832D598001F1083 /* BrowseItem.swift in Sources */,
+				79674C4F2832D5C7001F1083 /* BrowseCell.swift in Sources */,
+				79674C532832D60E001F1083 /* PlayerView.swift in Sources */,
+				79674C422832C463001F1083 /* DevicesListViewModel.swift in Sources */,
+				66513141267AB100009BD993 /* DevicesListView.swift in Sources */,
+				79674C4C2832D5A7001F1083 /* BrowseViewModel.swift in Sources */,
 				6651313F267AB100009BD993 /* SimplePlayerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,7 +281,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66513142267AB100009BD993 /* ContentView.swift in Sources */,
+				79674C472832C5A4001F1083 /* BrowseView.swift in Sources */,
+				79674C4A2832D598001F1083 /* BrowseItem.swift in Sources */,
+				79674C502832D5C7001F1083 /* BrowseCell.swift in Sources */,
+				79674C542832D60E001F1083 /* PlayerView.swift in Sources */,
+				79674C432832C463001F1083 /* DevicesListViewModel.swift in Sources */,
+				66513142267AB100009BD993 /* DevicesListView.swift in Sources */,
+				79674C4D2832D5A7001F1083 /* BrowseViewModel.swift in Sources */,
 				66513140267AB100009BD993 /* SimplePlayerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,6 +472,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SimplePlayer (macOS).entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -431,6 +503,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SimplePlayer (macOS).entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -495,6 +569,14 @@
 		66335E0A267AD4D5003FEB0D /* SSDPClient */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SSDPClient;
+		};
+		79D2D331282E6E13007BE4C6 /* UPnPClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UPnPClient;
+		};
+		79D2D333282E6E1A007BE4C6 /* UPnPClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UPnPClient;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

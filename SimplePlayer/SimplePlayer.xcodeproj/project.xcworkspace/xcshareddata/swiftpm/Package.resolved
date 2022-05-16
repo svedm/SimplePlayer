@@ -18,6 +18,15 @@
           "revision": "d161bf658780b209c185994528e7e24376cf7283",
           "version": "2.29.0"
         }
+      },
+      {
+        "package": "XMLCoder",
+        "repositoryURL": "https://github.com/CoreOffice/XMLCoder.git",
+        "state": {
+          "branch": null,
+          "revision": "f30119af03996939cc4f54e0bf0dda9f88a84da5",
+          "version": "0.13.1"
+        }
       }
     ]
   },

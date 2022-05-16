@@ -3,9 +3,9 @@ import NIO
 
 final public class NIOSSDPClient: SSDPClient {
     private let group = MultiThreadedEventLoopGroup(numberOfThreads: 1)
-    private var foundedDevices: [SSDPSearchResponse] = []
+    private var foundedDevices: Set<SSDPSearchResponse> = []
     private lazy var ssdpHandler = SSDPHandler { [weak self] message in
-        self?.foundedDevices.append(message)
+        self?.foundedDevices.insert(message)
     }
     private var discoveryContinuation: CheckedContinuation<[SSDPSearchResponse], Error>?
 
@@ -53,7 +53,7 @@ final public class NIOSSDPClient: SSDPClient {
                         if let error = error {
                             self.discoveryContinuation?.resume(throwing: error)
                         } else {
-                            self.discoveryContinuation?.resume(returning: self.foundedDevices)
+                            self.discoveryContinuation?.resume(returning: Array(self.foundedDevices))
                         }
                         self.discoveryContinuation = nil
                     }
