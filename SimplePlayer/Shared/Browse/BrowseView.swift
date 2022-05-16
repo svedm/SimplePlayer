@@ -14,13 +14,10 @@ struct BrowseView: View {
         _viewModel = StateObject(wrappedValue: viewModel)
     }
     
-
     var body: some View {
-        NavigationView {
-            List(viewModel.content, id: \.id) { item in
-                NavigationLink(destination: viewModel.destination(for: item)) {
-                    BrowseCell(item: item)
-                }
+        List(viewModel.content, id: \.id) { item in
+            NavigationLink(destination: viewModel.destination(for: item)) {
+                BrowseCell(item: item)
             }
         }
         .navigationTitle(viewModel.title)

@@ -8,6 +8,11 @@
 import SwiftUI
 import UPnPClient
 import AVKit
+#if os(macOS)
+    import Cocoa
+#elseif os(iOS) || os(tvOS)
+    import UIKit
+#endif
 
 @MainActor
 final class PlayerViewModel: ObservableObject {
@@ -29,22 +34,46 @@ struct PlayerView: View {
     }
     
     var body: some View {
-        VideoPlayer(player: viewModel.player)
+        CustomVideoPlayer(player: viewModel.player)
+            .onAppear {
+                viewModel.player.play()
+            }
+            .navigationBarHidden(true)
+            .edgesIgnoringSafeArea(.all)
     }
 }
 
-//struct CustomVideoPlayer: UIViewControllerRepresentable {
-//
-//  func makeUIViewController(context: Context) -> AVPlayerViewController {
-//    let controller = AVPlayerViewController()
-//    let url: String = "https://xxx.mp4"
-//    let player1 = AVPlayer(url: URL(string: url)!)
-//
-//    controller.player = player1
-//    return controller
-//  }
-//
-//  func updateUIViewController(_ uiViewController: AVPlayerViewController, context: Context) {
-//
-//  }
-//}
+
+struct CustomVideoPlayer {
+    private let player: AVPlayer
+
+    init(player: AVPlayer) {
+        self.player = player
+    }
+}
+#if os(iOS) || os(tvOS)
+extension CustomVideoPlayer: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> AVPlayerViewController {
+      let controller = AVPlayerViewController()
+      controller.player = player
+      return controller
+    }
+    
+    func updateUIViewController(_ uiViewController: AVPlayerViewController, context: Context) {
+    }
+}
+#endif
+
+#if os(macOS)
+extension CustomVideoPlayer: NSViewRepresentable {
+    
+    func makeNSView(context: Context) -> AVPlayerView {
+        let view = AVPlayerView()
+        view.player = player
+        return view
+    }
+    
+    func updateNSView(_ nsView: AVPlayerView, context: Context) {
+    }
+}
+#endif
