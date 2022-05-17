@@ -10,7 +10,7 @@ import XMLCoder
 
 public class Resource: Decodable, DynamicNodeDecoding {
     public let protocolInfo: String
-    public let value: String
+    public let value: URL
     
     public var kind: Kind? {
         Kind(string: protocolInfo)

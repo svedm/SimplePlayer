@@ -20,7 +20,7 @@ let package = Package(
     ],
     dependencies: [
         .package(name: "SSDPClient", path: "../SSDPClient"),
-        .package(url: "https://github.com/CoreOffice/XMLCoder.git", from: "0.13.1")
+        .package(url: "https://github.com/CoreOffice/XMLCoder.git", .exactItem("0.13.1"))
     ],
     targets: [
         .target(

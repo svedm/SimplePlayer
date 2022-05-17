@@ -37,9 +37,27 @@
 		79674C962832F5D0001F1083 /* SimplePlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66513131267AB0FF009BD993 /* SimplePlayerApp.swift */; };
 		79674C972832F5D7001F1083 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66513133267AB100009BD993 /* Assets.xcassets */; };
 		79674C992832F637001F1083 /* UPnPClient in Frameworks */ = {isa = PBXBuildFile; productRef = 79674C982832F637001F1083 /* UPnPClient */; };
+		7985F18F2833D846008AD8F1 /* MobileVLCKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7985F18E2833D846008AD8F1 /* MobileVLCKit.xcframework */; };
+		7985F1972833D85E008AD8F1 /* TVVLCKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7985F1962833D85E008AD8F1 /* TVVLCKit.xcframework */; };
+		7985F19C2833F0A7008AD8F1 /* VLCKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7985F1922833D84F008AD8F1 /* VLCKit.xcframework */; };
+		7985F19D2833F0A7008AD8F1 /* VLCKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7985F1922833D84F008AD8F1 /* VLCKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		79D2D332282E6E13007BE4C6 /* UPnPClient in Frameworks */ = {isa = PBXBuildFile; productRef = 79D2D331282E6E13007BE4C6 /* UPnPClient */; };
 		79D2D334282E6E1A007BE4C6 /* UPnPClient in Frameworks */ = {isa = PBXBuildFile; productRef = 79D2D333282E6E1A007BE4C6 /* UPnPClient */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7985F19E2833F0A7008AD8F1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7985F19D2833F0A7008AD8F1 /* VLCKit.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		66513131267AB0FF009BD993 /* SimplePlayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePlayerApp.swift; sourceTree = "<group>"; };
@@ -55,6 +73,12 @@
 		79674C4E2832D5C7001F1083 /* BrowseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseCell.swift; sourceTree = "<group>"; };
 		79674C522832D60E001F1083 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		79674C812832F568001F1083 /* SimplePlayer (tvOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SimplePlayer (tvOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7971E5F9283443FA0091D2BA /* SimplePlayer--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SimplePlayer--iOS--Info.plist"; sourceTree = "<group>"; };
+		7985F18E2833D846008AD8F1 /* MobileVLCKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MobileVLCKit.xcframework; path = ../Carthage/Build/MobileVLCKit.xcframework; sourceTree = "<group>"; };
+		7985F1922833D84F008AD8F1 /* VLCKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VLCKit.xcframework; path = ../Carthage/Build/VLCKit.xcframework; sourceTree = "<group>"; };
+		7985F1962833D85E008AD8F1 /* TVVLCKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TVVLCKit.xcframework; path = ../Carthage/Build/TVVLCKit.xcframework; sourceTree = "<group>"; };
+		7985F19F283443B2008AD8F1 /* SimplePlayer--macOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SimplePlayer--macOS--Info.plist"; sourceTree = "<group>"; };
+		7985F1A0283443C9008AD8F1 /* SimplePlayer--tvOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SimplePlayer--tvOS--Info.plist"; sourceTree = "<group>"; };
 		79D2D32F282E5904007BE4C6 /* SimplePlayer (macOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SimplePlayer (macOS).entitlements"; sourceTree = "<group>"; };
 		79D2D330282E5C5C007BE4C6 /* UPnPClient */ = {isa = PBXFileReference; lastKnownFileType = folder; name = UPnPClient; path = ../UPnPClient; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +89,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79D2D332282E6E13007BE4C6 /* UPnPClient in Frameworks */,
+				7985F18F2833D846008AD8F1 /* MobileVLCKit.xcframework in Frameworks */,
 				66335E09267AD4CF003FEB0D /* SSDPClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,6 +99,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79D2D334282E6E1A007BE4C6 /* UPnPClient in Frameworks */,
+				7985F19C2833F0A7008AD8F1 /* VLCKit.xcframework in Frameworks */,
 				66335E0B267AD4D5003FEB0D /* SSDPClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7985F1972833D85E008AD8F1 /* TVVLCKit.xcframework in Frameworks */,
 				79674C992832F637001F1083 /* UPnPClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +119,9 @@
 		66335E07267AD4CF003FEB0D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7985F1962833D85E008AD8F1 /* TVVLCKit.xcframework */,
+				7985F1922833D84F008AD8F1 /* VLCKit.xcframework */,
+				7985F18E2833D846008AD8F1 /* MobileVLCKit.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -99,6 +129,9 @@
 		6651312B267AB0FE009BD993 = {
 			isa = PBXGroup;
 			children = (
+				7971E5F9283443FA0091D2BA /* SimplePlayer--iOS--Info.plist */,
+				7985F1A0283443C9008AD8F1 /* SimplePlayer--tvOS--Info.plist */,
+				7985F19F283443B2008AD8F1 /* SimplePlayer--macOS--Info.plist */,
 				79D2D330282E5C5C007BE4C6 /* UPnPClient */,
 				79D2D32F282E5904007BE4C6 /* SimplePlayer (macOS).entitlements */,
 				66513160267AB27C009BD993 /* SSDPClient */,
@@ -187,9 +220,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6651314A267AB100009BD993 /* Build configuration list for PBXNativeTarget "SimplePlayer (macOS)" */;
 			buildPhases = (
+				79674CAA283314A3001F1083 /* ShellScript */,
 				6651313A267AB100009BD993 /* Sources */,
 				6651313B267AB100009BD993 /* Frameworks */,
 				6651313C267AB100009BD993 /* Resources */,
+				7985F19E2833F0A7008AD8F1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,7 +267,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1310;
-				LastUpgradeCheck = 1310;
+				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					66513137267AB100009BD993 = {
 						CreatedOnToolsVersion = 13.0;
@@ -310,6 +345,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n    cd ..\n    swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		79674CAA283314A3001F1083 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -483,6 +535,8 @@
 				DEVELOPMENT_TEAM = 6WCU73Y7FL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SimplePlayer--iOS--Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -513,6 +567,8 @@
 				DEVELOPMENT_TEAM = 6WCU73Y7FL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SimplePlayer--iOS--Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -550,6 +606,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SimplePlayer--macOS--Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -581,6 +638,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SimplePlayer--macOS--Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -607,6 +665,7 @@
 				DEVELOPMENT_TEAM = 6WCU73Y7FL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SimplePlayer--tvOS--Info.plist";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -635,6 +694,7 @@
 				DEVELOPMENT_TEAM = 6WCU73Y7FL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SimplePlayer--tvOS--Info.plist";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (

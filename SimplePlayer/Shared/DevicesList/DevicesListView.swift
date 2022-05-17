@@ -21,7 +21,6 @@ struct DevicesListView: View {
         }
     }
     
-    
     var body: some View {
         NavigationView {
             List(viewModel.devices, id: \.device.udn) { description in
@@ -48,8 +47,8 @@ struct DevicesListView: View {
                     }
                 }
             }
+            .navigationTitle("Devices list")
         }
-        .navigationTitle("Devices list")
         .onAppear {
             Task {
                 await viewModel.loadDevices()

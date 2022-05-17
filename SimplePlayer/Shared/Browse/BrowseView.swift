@@ -15,6 +15,16 @@ struct BrowseView: View {
     }
     
     var body: some View {
+        #if os(macOS)
+        NavigationView{
+            listView()
+        }
+        #else
+        listView()
+        #endif
+    }
+    
+    private func listView() -> some View {
         List(viewModel.content, id: \.id) { item in
             NavigationLink(destination: viewModel.destination(for: item)) {
                 BrowseCell(item: item)

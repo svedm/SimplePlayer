@@ -19,7 +19,7 @@ let package = Package(
         )
     ],
     dependencies: [
-         .package(url: "https://github.com/apple/swift-nio", from: "2.29.0"),
+         .package(url: "https://github.com/apple/swift-nio", from: "2.40.0"),
          .package(url: "https://github.com/apple/swift-log.git", from: "1.4.2")
     ],
     targets: [
